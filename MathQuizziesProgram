@@ -1,0 +1,177 @@
+import java.util.Scanner;
+class Main {
+  public static void main(String[] args) {
+    Scanner input = new Scanner (System.in);
+    String[]menu = {"grade 1", "grade 2", "grade 3" , "grade 4", "grade 5", "grade 6", "grade 7", "grade 8", "algebra1 ", "algebra2"};
+     String[] g1q = {"5 - 2 equals what number?", "Sarah has two chocolates. She bought 3 more chocolates. How many does she have now?","Subtract 8 from 18","Kelly has 9 envelopes but she gives 5 away. How many envelopes does she have left?", "What is 5 plus 2 minus 1 ?"};
+    String[] g1a = {"3", "5", "10", "4", "6"};
+    String[] g2q = {"What is 80 plus 60? ", "What is 147 + 234?", "If the minute hand is at 5 and the hour hand is at 5. What is the time read on the clock?" ,"What is 2 times 5?", "What is 3 times 7?" };
+    String[] g2a =  {"140", "381", "5:25", "10", "21"};
+    String[] g3q = {"Round 312 to the nearest hundred", "What is 59 times 6?", "Solve the following expression: \n 2(3 + 1) -4", "A fraction has 2 shaded portions out of 5 parts. What is the fraction?", " 340 divided by 10"};
+    String[] g3a = {"300", "354", "4", "2/5", "34"};
+    String[] g4q = {"Build the number 600 + 20 + 3", " What is 6 times 12?", " Find the greatest common factor of 6 and 12", " What decimal is the fraction 1/4?", "Find the perimeter of a square with side length 4"};
+    String[] g4a ={"623", "72", "6", "0.25", "16"};
+    String[] g5q = {"Round 25,472 to the nearest thousand", " What is 2 to the power of 3?", "X + 21 + 53 = 138. Solve for X", "What is 3/8 plus 4/8?", "Convert the mixed fraction 2 2/3 to an improper fraction."};
+    String[] g5a = {"25,000", "8", "64", "7/8", "8/3"};
+    String[] g6q = {"171,490 - X = 234. Solve for x. ", "What is 5 X 0.02", "36,276 X 3", "3/5 X 5", "75/100 = __%"};
+    String[] g6a = {"171,256", "0.1", "108,828", "3", "75"};
+    String[] g7q = {"What is -34 plus 52", "If the ration to girls to boys in the class is 1:2 and there are 9 students in the class, how many girls are there?", "What is the circumference of a circle with r =3. Answer: ___ pi", "What is the absolute value of -153?", "-392 times 2"};
+    String[] g7a = {"18", "3", "6", "153", "-784"};
+    String[] g8q = {"Square root of 49", "3 to the -2 power", "2x + x = 3. Solve for x", "What is the slope of a line that has a rise of 3 and run of 3?", "If one side of a right triangle is 3 and the other is 4, how long is the hypotenuse?"};
+    String[] g8a = {"7", "1/9", "1", "1", "5"};
+    String[] g9q = {"2x + 9 = 5x + 3. Solve for X", "How many meters are 16 centimeters?","What is the y-intercept of the line y = 3x+4?", "2 X sqrt 2 is also equals to the sqrt of ___", "What is one solutin to the equation x^2 -6x + 9?"};
+    String[] g9a = {"2", "0.16", "4", "8", "3"}; 
+    String[] alg2q = {"What is equivalent to 49^(3/2)?", "What is the simplified form of (2sqrt5+3)(sqrt5 - 1)", "What is the product of(2+3i) and(5+4i)", "f(x)=2x+7 and g(x)=3x^2-1,what expression represents(f(g(x))?", "The area of a square is 2sqrt2+3. What is the length of a side?"};
+
+    String[] alg2a = {"343", "sqrt5 + 7", "22+7i", "6x^2+5", "sqrt2+1"};;
+
+
+    int chosen =0;
+
+    while(chosen != 10 ){
+      chosen = menu();
+      if(chosen == 0){
+        Course g1 = new Course( g1q, g1a);
+        g1.QuizTime();
+        System.out.println("Score: " + g1.getScore() + " Accuracy: " + g1.getAcc());
+        g1.offerHelp();
+      } else if (chosen == 1){
+        Course g2 = new Course (g2q, g2a);
+        g2.QuizTime();
+        System.out.println("Score: " + g2.getScore() + " Accuracy: " + g2.getAcc());
+        g2.offerHelp();
+      } else if(chosen ==2){
+        Course g3 = new Course (g3q, g3a);
+        g3.QuizTime();
+        System.out.println("Score: " + g3.getScore() + " Accuracy: " + g3.getAcc());
+        g3.offerHelp();
+      } else if(chosen ==3){
+        Course g4 = new Course (g4q, g4a);
+         g4.QuizTime();
+        System.out.println("Score: " + g4.getScore() + " Accuracy: " + g4.getAcc());
+        g4.offerHelp();
+      } else if(chosen ==4){
+        Course g5 = new Course (g5q, g5a);
+        g5.QuizTime();
+        System.out.println("Score: " + g5.getScore() + " Accuracy: " + g5.getAcc());
+        g5.offerHelp();
+      } else if (chosen ==5){
+        Course g6 = new Course (g6q, g5a);
+         g6.QuizTime();
+        System.out.println("Score: " + g6.getScore() + " Accuracy: " + g6.getAcc());
+        g6.offerHelp();
+      } else if(chosen ==6){
+        Course g7 = new Course (g7q, g7a);
+         g7.QuizTime();
+        System.out.println("Score: " + g7.getScore() + " Accuracy: " + g7.getAcc());
+        g7.offerHelp();
+      } else if(chosen ==7){
+        Course g8 = new Course (g8q, g8a);
+         g8.QuizTime();
+        System.out.println("Score: " + g8.getScore() + " Accuracy: " + g8.getAcc());
+        g8.offerHelp();
+      } else if(chosen == 8){
+        Course alg1 = new Course (g9q, g9a);
+        alg1.QuizTime();
+        System.out.println("Score: " + alg1.getScore() + " Accuracy: " + alg1.getAcc());
+        alg1.offerHelp();
+      } else if (chosen ==9){
+        Course alg2 = new Course (alg2q, alg2a);
+        alg2.QuizTime();
+        System.out.println("Score: " + alg2.getScore() + " Accuracy: " + alg2.getAcc()); 
+         
+        alg2.QuizTime();
+        System.out.println("Score: " + alg2.getScore() + " Accuracy: " + alg2.getAcc());
+        alg2.offerHelp();
+      } else if(chosen == 10){
+        System.out.println("Program Exited");
+      } else{
+        System.out.pritnln("Invalid Option. Try again");
+      }
+    }
+
+   
+
+  }
+
+  public static int menu(){
+     String[]menu = {"grade 1", "grade 2", "grade 3" , "grade 4", "grade 5", "grade 6", "grade 7", "grade 8", "algebra1 ", "algebra2", "Exit"};
+     Scanner input = new Scanner(System.in);
+     System.out.println("Choose an option below: ");
+     for(int i = 0; i<menu.length; i++){
+      System.out.println(menu[i]+ " - press " + i);
+    }
+      int option = input.nextInt();
+      return option;
+
+  }
+
+}
+
+ 
+public class Course{
+  private String[] questions;
+  private String[] answers;
+  private double accuracy;
+  private int score =0;
+  private Scanner input = new Scanner (System.in);
+  
+  public Course(String[]qs, String[]as){
+    this.questions = qs;
+    this.answers=as;
+  }
+
+/*The user gets two tries on each question. If the user gets it right on the first time, he or she earns a 30 pts for the question. Else, he or she earns 20 pts. Zero pts are awared if the user does not get the question right in the two attempts.  */
+  public void QuizTime(){
+    String answer = "";
+    int correctCount =0;
+    int trialCount =0;
+    for(int i =0; i < questions.length; i++){
+      while(trialCount < 2){
+      System.out.println(questions[i]); 
+      answer = input.next();
+        if(answer.equals(answers[i])){
+          correctCount++;
+          System.out.println("Yes! You got it!");
+          break; 
+        }else{
+          System.out.println("Nope.Try Again");
+          answer=input.next();
+          if(answer.equals(answers[i])){
+          correctCount++;
+          System.out.println("Yes! You got it!");
+            break; 
+          }
+          trialCount ++;
+          if(trialCount ==2){
+            System.out.println("The correct answer is: " + answers[i]);
+          }
+        }
+      }
+
+      if(trialCount ==0){
+            score += 30;
+          }else if(trialCount ==1){
+            score += 15;
+
+          }
+    } 
+    accuracy = ((double)(correctCount))/(double)(questions.length);
+  }
+
+  public void offerHelp(){
+    if(accuracy <1.0){
+      System.out.println("Since you didn't do as well as you hoped, here is an url that takes you to a list of great resources. Happy studying!: \n https://1drv.ms/x/s!AveNaPe92C6akDNla2AULhc-GHnX?e=UFWqhA");
+    }else{
+      System.out.println("Great job! You have mastered this!");
+    }
+  }
+
+  public int getScore(){
+    return score;
+  } 
+
+  public double getAcc(){
+    return accuracy;
+  }
+}
